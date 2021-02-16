@@ -1,10 +1,11 @@
+
 // 引入异步请求库
 const rp = require('request-promise')
 //微信小程序的APPID和APPSECRET
 const APPID = 'wx71a981549bfa7fbb'
 const APPSECRET = '8bbfa2b3ff79133c93723b7d23cb7ea8'
 //请求access——token的URL
-const URL = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${APPID}&secret=${APPSECRET}'
+const URL = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${APPID}&secret=${APPSECRET}`
 //引入node.js的文件操作模块【自带】
 const fs = require('fs')
 //引入node.js的文件路径模块【自带】

@@ -1,4 +1,3 @@
-
 // 引入异步请求库
 const rp = require('request-promise')
 //微信小程序的APPID和APPSECRET

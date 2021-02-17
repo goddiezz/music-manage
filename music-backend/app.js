@@ -28,10 +28,11 @@ app.use(async (ctx, next) => {
 
 //通过require引入student模块
 const playlist = require('./controller/playlist.js')
+const swiper = require('./controller/swiper.js')
 
 //给student模块使用定义跟路由为‘/student’
 router.use('/playlist', playlist.routes())
-
+router.use('/swiper', swiper.routes())
 //使用路由
 app.use(router.routes())
 app.use(router.allowedMethods())

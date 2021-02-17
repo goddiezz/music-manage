@@ -9,6 +9,7 @@ const cloudStorage = {
         // 1.获取文件上传链接
         const ACCESS_TOKEN = await getAccessToken()
         const file = ctx.request.files.file //客户端文件对象
+        console.log(ctx)
         const path = `swiper/${Date.now()}-${Math.random()}-${file.name}` //云存储路径
         //封装请求相关操作，包括请求方法，请求地址，请求体json对象，返回值转为JSON
         const options = {
@@ -60,7 +61,7 @@ const cloudStorage = {
         const ACCESS_TOKEN = await getAccessToken()
         const options = {
             method: 'POST',
-            uri: `https://api.weixin.qq.com/tcb/batchdownfile?access_token=${ACCESS_TOKEN}`,
+            uri: `https://api.weixin.qq.com/tcb/batchdownloadfile?access_token=${ACCESS_TOKEN}`,
             body: {
                 env: ctx.state.env,
                 file_list: fileList,
